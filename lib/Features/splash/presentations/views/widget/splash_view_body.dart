@@ -52,13 +52,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
   }
 
-  void initSlidingAnimationImage() {
-    slidingAnimationImage = Tween<Offset>(
-      begin: const Offset(0, -10),
-      end: Offset.zero,
-    ).animate(animationController);
-  }
-
   void initSlidingAnimationText() {
     animationController = AnimationController(
       vsync: this,
@@ -66,6 +59,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
     slidingAnimation = Tween<Offset>(
       begin: const Offset(0, 10),
+      end: Offset.zero,
+    ).animate(animationController);
+  }
+
+  void initSlidingAnimationImage() {
+    slidingAnimationImage = Tween<Offset>(
+      begin: const Offset(0, -10),
       end: Offset.zero,
     ).animate(animationController);
   }
