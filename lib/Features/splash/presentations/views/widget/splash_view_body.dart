@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pro_book/Features/Home/presentation/views/home_view.dart';
 import 'package:pro_book/Features/splash/presentations/views/widget/sliding_animation.dart';
+import 'package:pro_book/constants.dart';
 import 'package:pro_book/core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -19,8 +22,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
     initSlidingAnimationText();
     initSlidingAnimationImage();
-
     animationController.forward();
+    Future.delayed(const Duration(seconds: 3), () {
+     Get.to(() => const HomeView(),transition: Transition.fade,duration: kPrimaryDuration );
+    });
   }
 
   @override
