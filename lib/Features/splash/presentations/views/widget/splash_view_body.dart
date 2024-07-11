@@ -34,18 +34,29 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SlidingAnimation(slidingAnimation: slidingAnimationImage, child: Image.asset(AssetsData.logo)),
+        SlidingAnimation(
+            slidingAnimation: slidingAnimationImage,
+            child: Image.asset(AssetsData.logo)),
         const SizedBox(
           height: 4,
         ),
         SlidingAnimation(
           slidingAnimation: slidingAnimation,
-          child: const Text('Read Free Books',textAlign: TextAlign.center,),
+          child: const Text(
+            'Read Free Books',
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     );
