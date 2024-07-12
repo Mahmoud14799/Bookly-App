@@ -24,7 +24,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     initSlidingAnimationImage();
     animationController.forward();
     Future.delayed(const Duration(seconds: 3), () {
-     Get.to(() => const HomeView(),transition: Transition.fade,duration: kPrimaryDuration );
+     Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration );
     });
   }
 
