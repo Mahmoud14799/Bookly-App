@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_book/Features/Home/presentation/views/home_view.dart';
-import 'package:pro_book/Features/splash/presentations/views/widget/sliding_animation.dart';
+import 'package:pro_book/features/Home/presentation/views/home_view.dart';
+import 'package:pro_book/features/splash/presentation/views/widget/sliding_animation.dart';
 import 'package:pro_book/constants.dart';
 import 'package:pro_book/core/utils/assets.dart';
 
@@ -23,11 +23,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
     initSlidingAnimationText();
     initSlidingAnimationImage();
     animationController.forward();
-    Future.delayed(const Duration(seconds: 3), () {
-     Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration );
-    });
+    _goToHome();
+    // Future.delayed(const Duration(seconds: 3), () {
+    //  Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration );
+    // });
   }
-
+_goToHome()async {
+  await Future.delayed(const Duration(seconds: 3), () {});
+  Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration);
+}
   @override
   void dispose() {
     super.dispose();
