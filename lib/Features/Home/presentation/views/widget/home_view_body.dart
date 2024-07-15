@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pro_book/Features/Home/presentation/views/widget/best_seller_list/best_seller_list.dart';
-import 'package:pro_book/Features/Home/presentation/views/widget/appBar/custom_app_bar.dart';
-import 'package:pro_book/Features/Home/presentation/views/widget/featuerd_list_view.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/best_seller_list.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/appBar/custom_app_bar.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/featuerd_list_view.dart';
 import 'package:pro_book/constants.dart';
 import 'package:pro_book/core/utils/style.dart';
 
@@ -14,12 +14,17 @@ class HomeViewBody extends StatelessWidget {
       floatHeaderSlivers: true,
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
-          const SliverAppBar(
-          backgroundColor: kPrimaryColor,
+          SliverAppBar(
+          
+            collapsedHeight: MediaQuery.of(context).size.height * 1 / 11,
+            surfaceTintColor: kPrimaryColor,
+            backgroundColor: kPrimaryColor,
             automaticallyImplyLeading: false,
-            title: CustomAppBar(),
+            flexibleSpace: const Padding(
+              padding: EdgeInsets.only(left: 30, top: 30, right: 15),
+              child: CustomAppBar(),
+            ),
             pinned: true,
-            floating: true,
           ),
           const SliverToBoxAdapter(
             child: Column(
@@ -38,13 +43,12 @@ class HomeViewBody extends StatelessWidget {
               minHeight: 50.0,
               maxHeight: 50.0,
               child: Container(
-              padding: kPadding30,
-              alignment: Alignment.centerLeft,
+                padding: kPadding30,
+                alignment: Alignment.centerLeft,
                 color: kPrimaryColor,
                 child: const Text(
                   'Best Seller',
                   style: Styles.textStyle18,
-                
                 ),
               ),
             ),
