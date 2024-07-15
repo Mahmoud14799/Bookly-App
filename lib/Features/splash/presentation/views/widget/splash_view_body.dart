@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:pro_book/features/Home/presentation/views/home_view.dart';
+import 'package:go_router/go_router.dart';
+import 'package:pro_book/core/utils/app_router.dart';
+
 import 'package:pro_book/features/splash/presentation/views/widget/sliding_animation.dart';
-import 'package:pro_book/constants.dart';
 import 'package:pro_book/core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -24,14 +24,18 @@ class _SplashViewBodyState extends State<SplashViewBody>
     initSlidingAnimationImage();
     animationController.forward();
     _goToHome();
-    // Future.delayed(const Duration(seconds: 3), () {
-    //  Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration );
-    // });
   }
-_goToHome()async {
-  await Future.delayed(const Duration(seconds: 3), () {});
-  Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration);
-}
+
+  void _goToHome() async {
+    await Future.delayed(const Duration(seconds: 3), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
+
+    //this route is not working in getMaterialApp not in MaterialApp
+
+    // Get.to(() => const HomeView(),transition: Transition.fadeIn,duration: kPrimaryDuration);
+  }
+
   @override
   void dispose() {
     super.dispose();
