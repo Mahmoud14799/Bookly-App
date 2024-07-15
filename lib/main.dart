@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_book/Features/splash/presentations/views/splash_view.dart';
+import 'package:pro_book/features/splash/presentation/views/splash_view.dart';
 import 'package:pro_book/constants.dart';
 
 void main() {
