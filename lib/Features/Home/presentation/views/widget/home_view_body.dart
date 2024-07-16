@@ -14,13 +14,11 @@ class HomeViewBody extends StatelessWidget {
       floatHeaderSlivers: true,
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
-          SliverAppBar(
-          
-            collapsedHeight: MediaQuery.of(context).size.height * 1 / 11,
+          const SliverAppBar(
             surfaceTintColor: kPrimaryColor,
             backgroundColor: kPrimaryColor,
             automaticallyImplyLeading: false,
-            flexibleSpace: const Padding(
+            flexibleSpace: Padding(
               padding: EdgeInsets.only(left: 30, top: 30, right: 15),
               child: CustomAppBar(),
             ),
