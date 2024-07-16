@@ -4,7 +4,7 @@ import 'package:pro_book/core/utils/assets.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Row(
