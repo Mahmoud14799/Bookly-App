@@ -1,9 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:pro_book/core/utils/app_router.dart';
 import 'package:pro_book/constants.dart';
 
 void main() {
-  runApp(const ProBook());
+  runApp(
+  DevicePreview(
+    enabled: true,
+    builder: (context) => const ProBook(),
+  ),
+  );
 }
 
 class ProBook extends StatelessWidget {
