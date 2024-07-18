@@ -44,7 +44,7 @@ class HomeViewBody extends StatelessWidget {
                 padding: kPadding30,
                 alignment: Alignment.centerLeft,
                 color: kPrimaryColor,
-                child: const Text(
+                child:  Text(
                   'Best Seller',
                   style: Styles.textStyle18,
                 ),

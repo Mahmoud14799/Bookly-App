@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pro_book/constants.dart';
 
 abstract class Styles {
-  static const textStyle18 = TextStyle(
-    fontSize: 18,
+  static final textStyle18 = TextStyle(
+    fontSize: 18.sp,
     fontWeight: FontWeight.w600,
     fontFamily: kMontserratSemiBold
   );
 
-  static const textStyle20 = TextStyle(
-    fontSize: 20,
+  static final textStyle20 = TextStyle(
+    fontSize: 20.sp,
     fontWeight: FontWeight.w400,
     fontFamily: kGTSectraFine
 
   );
 
-  static const textStyle14 = TextStyle(
-    fontSize: 14,
+  static final textStyle14 = TextStyle(
+    fontSize: 14.sp,
     fontWeight: FontWeight.w500,
     fontFamily: kMontserrat,
     color:  Colors.grey,
   );
 
-  static const textStyle16 = TextStyle(
-    fontSize: 16,
+  static final textStyle16 = TextStyle(
+    fontSize: 16.sp,
     fontWeight: FontWeight.w500,
     fontFamily: kMontserrat
   );
-  static const textStyle30 = TextStyle(
-    fontSize: 30,
+  static final textStyle30 = TextStyle(
+    fontSize: 30.sp,
     fontWeight: FontWeight.w400,
   );
 }

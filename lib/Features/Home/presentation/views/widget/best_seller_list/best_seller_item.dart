@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pro_book/core/utils/app_router.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/book_rating_item.dart';
@@ -38,18 +39,19 @@ class BestSellerListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    child: const Text(
+                    width: 160.w,
+                    height: 55.h,
+                    child: Text(
                       'Harry Potter and the Goblet of Fire',
                       style: Styles.textStyle20,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const SizedBox(
-                    height: 3,
+                   SizedBox(
+                    height: 3.h,
                   ),
-                  const Text('J.K. Rowling', style: Styles.textStyle14),
+                  Text('J.K. Rowling', style: Styles.textStyle14),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
