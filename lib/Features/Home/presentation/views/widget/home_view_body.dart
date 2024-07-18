@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/best_seller_list.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/appBar/custom_app_bar.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/featuerd_list_view.dart';
@@ -18,16 +19,17 @@ class HomeViewBody extends StatelessWidget {
             surfaceTintColor: kPrimaryColor,
             backgroundColor: kPrimaryColor,
             automaticallyImplyLeading: false,
-            flexibleSpace: Padding(
-              padding: EdgeInsets.only(left: 30, top: 30, right: 15),
-              child: CustomAppBar(),
-            ),
+            // collapsedHeight: 80.h,
+            flexibleSpace: FlexibleSpaceBar(title: CustomAppBar(),titlePadding: EdgeInsets.only(left: 30,right: 30),),
             pinned: true,
           ),
           const SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 30,
+                ),
                 FeaturedBooksListView(),
                 SizedBox(
                   height: 51,
@@ -38,13 +40,13 @@ class HomeViewBody extends StatelessWidget {
           SliverPersistentHeader(
             pinned: true,
             delegate: _SliverAppBarDelegate(
-              minHeight: 50.0,
-              maxHeight: 50.0,
+              minHeight: 50.0.h,
+              maxHeight: 50.0.h,
               child: Container(
                 padding: kPadding30,
                 alignment: Alignment.centerLeft,
                 color: kPrimaryColor,
-                child:  Text(
+                child: Text(
                   'Best Seller',
                   style: Styles.textStyle18,
                 ),
