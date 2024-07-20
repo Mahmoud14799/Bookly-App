@@ -40,7 +40,7 @@ class BestSellerListViewItem extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: 160.w,
-                    height: 55.h,
+                    height: 40.h,
                     child: Text(
                       'Harry Potter and the Goblet of Fire',
                       style: Styles.textStyle20,
@@ -48,10 +48,12 @@ class BestSellerListViewItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                   SizedBox(
-                    height: 3.h,
+                  const SizedBox(
+                    height: 3,
                   ),
-                  Text('J.K. Rowling', style: Styles.textStyle14),
+                  Opacity(
+                      opacity: 0.5,
+                    child: Text('J.K. Rowling', style: Styles.textStyle14)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
