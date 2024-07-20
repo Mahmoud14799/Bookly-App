@@ -6,7 +6,7 @@ abstract class Styles {
   static final textStyle18 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: kMontserratSemiBold
+    fontFamily: kMontserrat
   );
 
   static final textStyle20 = TextStyle(
@@ -20,7 +20,7 @@ abstract class Styles {
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
     fontFamily: kMontserrat,
-    color:  Colors.grey,
+    
   );
 
   static final textStyle16 = TextStyle(
@@ -31,5 +31,6 @@ abstract class Styles {
   static final textStyle30 = TextStyle(
     fontSize: 30.sp,
     fontWeight: FontWeight.w400,
+    fontFamily: kGTSectraFine
   );
 }
