@@ -10,20 +10,21 @@ class AppBarDetailsView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+        
           IconButton(
             onPressed: () {
               GoRouter.of(context).pop();
             },
             icon: const Icon(
               Icons.close,
-              size: 20,
+              size: 31
             ),
           ),
           IconButton(
               onPressed: () {},
               icon: const Icon(
                 Icons.shopping_cart_outlined,
-                size: 15,
+                size: 25,
               ))
         ],
       ),

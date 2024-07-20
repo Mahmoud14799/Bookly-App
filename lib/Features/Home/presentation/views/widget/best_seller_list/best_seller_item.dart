@@ -40,7 +40,7 @@ class BestSellerListViewItem extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: 160.w,
-                    height: 40.h,
+                    height: 45.h,
                     child: Text(
                       'Harry Potter and the Goblet of Fire',
                       style: Styles.textStyle20,
@@ -63,6 +63,7 @@ class BestSellerListViewItem extends StatelessWidget {
                           fontFamily: kMontserrat,
                         ),
                       ),
+                      SizedBox(width: 35.w,),
                       const BookRating(),
                     ],
                   ),

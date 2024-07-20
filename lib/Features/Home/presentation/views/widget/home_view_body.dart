@@ -32,7 +32,7 @@ class HomeViewBody extends StatelessWidget {
                 ),
                 FeaturedBooksListView(),
                 SizedBox(
-                  height: 51,
+                  height: 30,
                 ),
               ],
             ),
@@ -48,7 +48,7 @@ class HomeViewBody extends StatelessWidget {
                 color: kPrimaryColor,
                 child: Text(
                   'Best Seller',
-                  style: Styles.textStyle18,
+                  style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w700, ),
                 ),
               ),
             ),
