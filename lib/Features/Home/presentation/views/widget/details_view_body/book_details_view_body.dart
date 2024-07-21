@@ -4,6 +4,7 @@ import 'package:pro_book/core/utils/style.dart';
 import 'package:pro_book/core/widget/custom_buttom.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/appBar/app_bar_details_view.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/book_rating_item.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/details_view_body/books_action.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/features_list/custom_book_item.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -41,7 +42,7 @@ class BookDetailsViewBody extends StatelessWidget {
         SizedBox(
           height: 37.h,
         ),
-        const BookButtonAction(),
+        const BookAction(),
         SizedBox(
           height: hight == 640.0 ? 10 : 50,
         ),
@@ -80,33 +81,6 @@ class LikeList extends StatelessWidget {
           );
         },
       ),
-    );
-  }
-}
-
-class BookButtonAction extends StatelessWidget {
-  const BookButtonAction({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CustomButton(
-          text: '19.99€',
-          textColor: Colors.black,
-          backgroundColor: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12), bottomLeft: Radius.circular(12)),
-        ),
-        CustomButton(
-          text: 'Free preview',
-          textColor: Colors.white,
-          backgroundColor: Color(0xffEF8262),
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(12), bottomRight: Radius.circular(12)),
-        )
-      ],
     );
   }
 }
