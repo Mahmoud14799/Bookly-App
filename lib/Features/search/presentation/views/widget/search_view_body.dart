@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pro_book/features/search/presentation/views/widget/custom_search_text_field.dart';
 
 class SearchViewBody extends StatelessWidget {
