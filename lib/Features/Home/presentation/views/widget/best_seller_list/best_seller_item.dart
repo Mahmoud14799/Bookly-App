@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pro_book/core/utils/app_router.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/best_seller_image_item.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/book_rating_item.dart';
 import 'package:pro_book/constants.dart';
 import 'package:pro_book/core/utils/assets.dart';
 import 'package:pro_book/core/utils/style.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +21,7 @@ class BestSellerListViewItem extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.15,
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 2.7 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  image: const DecorationImage(
-                      image: AssetImage(AssetsData.testBook), fit: BoxFit.fill),
-                ),
-              ),
-            ),
+            const BestSellerImageItem(),
             const SizedBox(
               width: 30,
             ),
@@ -53,7 +45,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   ),
                   Opacity(
                       opacity: 0.5,
-                    child: Text('J.K. Rowling', style: Styles.textStyle14)),
+                      child: Text('J.K. Rowling', style: Styles.textStyle14)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -63,7 +55,9 @@ class BestSellerListViewItem extends StatelessWidget {
                           fontFamily: kMontserrat,
                         ),
                       ),
-                      SizedBox(width: 35.w,),
+                      SizedBox(
+                        width: 35.w,
+                      ),
                       const BookRating(),
                     ],
                   ),
