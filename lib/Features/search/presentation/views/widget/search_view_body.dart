@@ -4,8 +4,6 @@ import 'package:pro_book/core/utils/style.dart';
 import 'package:pro_book/features/search/presentation/views/widget/custom_search_text_field.dart';
 import 'package:pro_book/features/search/presentation/views/widget/search_result_list_view.dart';
 
-import '../../../../Home/presentation/views/widget/best_seller_list/best_seller_item.dart';
-
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
 
