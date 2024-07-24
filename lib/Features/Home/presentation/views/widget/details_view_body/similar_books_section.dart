@@ -18,7 +18,7 @@ class SimilarBooksSection extends StatelessWidget {
             style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w700),
           ),
           SizedBox(
-            height: 15.h,
+            height: 16.h,
           ),
           const SimilarBooksListView(),
         ],

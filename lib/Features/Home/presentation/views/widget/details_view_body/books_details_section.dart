@@ -11,16 +11,17 @@ class BooksDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double hight = MediaQuery.of(context).size.height;
+
     return Column(
       children: [
         Padding(
           padding:
-              EdgeInsets.symmetric(horizontal: hight >= 640.0 ? 125.w : 80.w),
+              EdgeInsets.symmetric(horizontal: hight <= 640.0 ? 140.w : 120.w),
           child: const CustomBookImage(),
         ),
         SizedBox(height: 43.h),
         Text(
-          "The Jungle Book",
+          hight.toString(),
           style: Styles.textStyle30,
         ),
         Opacity(
@@ -39,7 +40,7 @@ class BooksDetailsSection extends StatelessWidget {
         ),
         const BookAction(),
         SizedBox(
-          height: hight == 640.0 ? 10 : 50,
+          height: 50.h,
         ),
       ],
     );
