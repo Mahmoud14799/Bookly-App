@@ -5,7 +5,6 @@ import 'package:pro_book/core/utils/app_router.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/best_seller_image_item.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/book_rating_item.dart';
 import 'package:pro_book/constants.dart';
-import 'package:pro_book/core/utils/assets.dart';
 import 'package:pro_book/core/utils/style.dart';
 
 class BookListViewItem extends StatelessWidget {
