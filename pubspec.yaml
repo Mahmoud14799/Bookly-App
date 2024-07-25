@@ -30,6 +30,7 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.6
   device_preview: ^1.2.0
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_screenutil: ^5.9.3
@@ -57,7 +58,7 @@ flutter:
         - asset: assets/fonts/GT-Sectra-Fine-Regular.ttf
     - family: Montserrat
       fonts:
-        - asset: assets/fonts/Montserrat-Medium.ttf  
+        - asset: assets/fonts/Montserrat-Medium.ttf
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
@@ -76,7 +77,6 @@ flutter_icons:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

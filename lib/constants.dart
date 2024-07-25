@@ -6,4 +6,3 @@ const kPadding30 = EdgeInsets.symmetric(horizontal: 30);
 
 const kGTSectraFine = "gt_sectra_fine";
 const kMontserrat = 'Montserrat';
-

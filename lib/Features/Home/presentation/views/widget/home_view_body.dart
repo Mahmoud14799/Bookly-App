@@ -20,7 +20,10 @@ class HomeViewBody extends StatelessWidget {
             backgroundColor: kPrimaryColor,
             automaticallyImplyLeading: false,
             // collapsedHeight: 80.h,
-            flexibleSpace: FlexibleSpaceBar(title: CustomAppBar(),titlePadding: EdgeInsets.only(left: 30,right: 30),),
+            flexibleSpace: FlexibleSpaceBar(
+              title: CustomAppBar(),
+              titlePadding: EdgeInsets.only(left: 30, right: 30),
+            ),
             pinned: true,
           ),
           const SliverToBoxAdapter(
@@ -48,7 +51,9 @@ class HomeViewBody extends StatelessWidget {
                 color: kPrimaryColor,
                 child: Text(
                   'Best Seller',
-                  style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w700, ),
+                  style: Styles.textStyle18.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),
