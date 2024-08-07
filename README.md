@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# Pro_Book
-=======
-# pro_book
+
+# Bookly App
 
 A new Flutter project.
 
