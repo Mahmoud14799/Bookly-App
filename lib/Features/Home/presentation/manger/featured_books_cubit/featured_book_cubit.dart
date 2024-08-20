@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:pro_book/core/Error/failures.dart';
 import 'package:pro_book/features/Home/data/models/book_model/book_model.dart';
 import 'package:pro_book/features/Home/data/repos/home_repo.dart';
 

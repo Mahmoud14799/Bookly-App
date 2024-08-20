@@ -17,51 +17,54 @@ class BookListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.kDetailsView);
       },
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.15,
+        height: MediaQuery.of(context).size.height * 0.17,
         child: Row(
           children: [
             const BestSellerImageItem(),
-            const SizedBox(
-              width: 30,
+            SizedBox(
+              width: 30.w,
             ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 160.w,
-                    height: 45.h,
-                    child: Text(
-                      'Harry Potter and the Goblet of Fire',
-                      style: Styles.textStyle20,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 10.h,
+                ),
+                SizedBox(
+                  width: 190.w,
+                  height: 60.h,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire',
+                    style: Styles.textStyle20,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                Opacity(
+                    opacity: 0.5,
+                    child: Text('J.K. Rowling', style: Styles.textStyle14)),
+                SizedBox(
+                  height: 8.h.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '19.99 €',
+                      style: Styles.textStyle20.copyWith(
+                        fontFamily: kMontserrat,
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 3,
-                  ),
-                  Opacity(
-                      opacity: 0.5,
-                      child: Text('J.K. Rowling', style: Styles.textStyle14)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '19.99 €',
-                        style: Styles.textStyle20.copyWith(
-                          fontFamily: kMontserrat,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 35.w,
-                      ),
-                      const BookRating(),
-                    ],
-                  ),
-                ],
-              ),
+                    SizedBox(
+                      width: 35.w,
+                    ),
+                    const BookRating(),
+                  ],
+                ),
+              ],
             )
           ],
         ),

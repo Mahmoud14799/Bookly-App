@@ -26,16 +26,16 @@ class HomeViewBody extends StatelessWidget {
             ),
             pinned: true,
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                FeaturedBooksListView(),
+                const FeaturedBooksListView(),
                 SizedBox(
-                  height: 30,
+                  height: 20.h,
                 ),
               ],
             ),
