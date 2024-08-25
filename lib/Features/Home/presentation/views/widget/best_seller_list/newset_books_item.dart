@@ -24,6 +24,7 @@ class BookListViewItem extends StatelessWidget {
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.17,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             BestSellerImageItem(
               imageUrl: book.volumeInfo.imageLinks.thumbnail,
@@ -38,7 +39,7 @@ class BookListViewItem extends StatelessWidget {
                   height: 10.h,
                 ),
                 SizedBox(
-                  width: 190.w,
+                  width: 200.w,
                   height: 60.h,
                   child: Text(
                     book.volumeInfo.title!,
@@ -73,7 +74,7 @@ class BookListViewItem extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 70.w,
+                      width: 100.w,
                     ),
                     BookRating(
                       averageRating: book.volumeInfo.averageRating ?? 8,
