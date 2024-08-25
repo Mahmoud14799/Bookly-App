@@ -1,13 +1,20 @@
-// import 'package:dio/dio.dart';
-// import 'package:pro_book/core/utils/api_service.dart';
-// import 'package:pro_book/features/Home/data/repos/home_repo_impl.dart';
+import 'package:dio/dio.dart';
+import 'package:get_it/get_it.dart';
+import 'package:pro_book/core/utils/api_service.dart';
+import 'package:pro_book/features/Home/data/repos/home_repo_impl.dart';
 
-// class ServiceLocator {
-//   final HomeRepoImpl _homeRepoImpl;
+final getIt = GetIt.instance;
 
-//   ServiceLocator._(this._homeRepoImpl);
+void setupServiceLocator() {
+  getIt.registerSingleton<ApiService>(
+    ApiService(
+      Dio(),
+    ),
+  );
 
-//   HomeRepoImpl getRepo() {
-//    return HomeRepoImpl();
-//   }
-// }
+  getIt.registerSingleton<HomeRepoImpl>(
+    HomeRepoImpl(
+      getIt.get<ApiService>(),
+    ),
+  );
+}
