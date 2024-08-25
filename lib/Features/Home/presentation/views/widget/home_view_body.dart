@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/best_seller_list.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/newset_books_list.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/appBar/custom_app_bar.dart';
 import 'package:pro_book/features/Home/presentation/views/widget/featuerd_list_view.dart';
 import 'package:pro_book/constants.dart';
@@ -50,7 +50,7 @@ class HomeViewBody extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 color: kPrimaryColor,
                 child: Text(
-                  'Best Seller',
+                  'Newest Books',
                   style: Styles.textStyle18.copyWith(
                     fontWeight: FontWeight.w700,
                   ),
@@ -60,7 +60,7 @@ class HomeViewBody extends StatelessWidget {
           ),
         ];
       },
-      body: const BestSellerList(),
+      body: const NewsetBooksList(),
     );
   }
 }

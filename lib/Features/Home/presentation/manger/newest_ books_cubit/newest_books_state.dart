@@ -20,4 +20,6 @@ final class NewestBooksSuccess extends NewestBooksState {
 final class NewestBooksFailure extends NewestBooksState {
   final String errorMassage;
   const NewestBooksFailure(this.errorMassage);
+
+  get failure => null;
 }

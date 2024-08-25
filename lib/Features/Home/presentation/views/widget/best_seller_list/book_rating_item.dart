@@ -4,8 +4,15 @@ import 'package:pro_book/core/utils/style.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+      {super.key,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      required this.averageRating,
+      required this.countRating});
   final MainAxisAlignment mainAxisAlignment;
+  @override
+  final int averageRating;
+  final int countRating;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,11 +26,14 @@ class BookRating extends StatelessWidget {
         const SizedBox(
           width: 6.2,
         ),
-        Text('4.8', style: Styles.textStyle16),
+        Text(averageRating.toString(), style: Styles.textStyle16),
         const SizedBox(
           width: 5,
         ),
-        Opacity(opacity: 0.5, child: Text('(2551)', style: Styles.textStyle14)),
+        Opacity(
+            opacity: 0.5,
+            child:
+                Text('(${countRating.toString()})', style: Styles.textStyle14)),
       ],
     );
   }

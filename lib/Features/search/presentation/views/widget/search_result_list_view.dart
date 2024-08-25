@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/best_seller_item.dart';
+import 'package:pro_book/features/Home/presentation/views/widget/best_seller_list/newset_books_item.dart';
 
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
@@ -14,7 +14,10 @@ class SearchResultListView extends StatelessWidget {
             padding: EdgeInsets.only(
               bottom: 20,
             ),
-            child: BookListViewItem(),
+            // child: BookListViewItem(
+
+            // ),
+            child: Text('dfdf'),
           );
         });
   }
