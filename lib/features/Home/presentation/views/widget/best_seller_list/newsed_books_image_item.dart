@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pro_book/core/utils/assets.dart';
 
 class BestSellerImageItem extends StatelessWidget {
   const BestSellerImageItem({super.key, required this.imageUrl});

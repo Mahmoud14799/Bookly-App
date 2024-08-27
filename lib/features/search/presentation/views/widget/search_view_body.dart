@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:pro_book/constants.dart';
 import 'package:pro_book/core/utils/style.dart';
 import 'package:pro_book/features/search/presentation/views/widget/custom_search_text_field.dart';
