@@ -71,7 +71,7 @@ class HomeRepoImpl implements HomeRepo {
       {required String category}) async {
     try {
       var data = await apiService.get(
-        'volumes?Filtering=free-books&sorting=newest&Sorting=relevance&q=computer science&maxResults=40',
+        'volumes?Filtering=free-books&Sorting=relevance &q=computer science&maxResults=40',
       );
 
       List<BookModel> books = [];
@@ -80,7 +80,7 @@ class HomeRepoImpl implements HomeRepo {
         try {
           books.add(BookModel.fromJson(item));
         } catch (e) {
-          books.add(BookModel.fromJson(item));
+          print(e);
         }
       }
 

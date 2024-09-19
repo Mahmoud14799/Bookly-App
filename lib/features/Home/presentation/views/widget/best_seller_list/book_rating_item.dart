@@ -9,8 +9,7 @@ class BookRating extends StatelessWidget {
       required this.averageRating,
       required this.countRating});
   final MainAxisAlignment mainAxisAlignment;
-  @override
-  final int averageRating;
+  final num averageRating;
   final int countRating;
 
   @override

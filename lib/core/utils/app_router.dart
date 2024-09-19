@@ -1,4 +1,9 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pro_book/core/utils/service_locator.dart';
+import 'package:pro_book/features/Home/data/models/book_model/book_model.dart';
+import 'package:pro_book/features/Home/data/repos/home_repo_impl.dart';
+import 'package:pro_book/features/Home/presentation/manger/similar_books_cubit/similar_books_cubit.dart';
 import 'package:pro_book/features/Home/presentation/views/details_view.dart';
 import 'package:pro_book/features/Home/presentation/views/home_view.dart';
 import 'package:pro_book/features/search/presentation/views/search_view.dart';
@@ -25,7 +30,12 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: kDetailsView,
-      builder: (context, state) => const DetailsView(),
-    )
+      builder: (context, state) => BlocProvider(
+        create: (context) => SimilarBooksCubit(getIt.get<HomeRepoImpl>()),
+        child: DetailsView(
+          bookModel: state.extra as BookModel,
+        ),
+      ),
+    ),
   ]);
 }
