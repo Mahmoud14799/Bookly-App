@@ -27,7 +27,7 @@ class BookListViewItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             BestSellerImageItem(
-              imageUrl: book.volumeInfo.imageLinks.thumbnail,
+              imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? '',
             ),
             SizedBox(
               width: 30.w,
@@ -56,7 +56,7 @@ class BookListViewItem extends StatelessWidget {
                   height: 20.h,
                   child: Opacity(
                       opacity: 0.5,
-                      child: Text(book.volumeInfo.authors![0],
+                      child: Text(book.volumeInfo.authors?[0] ?? '',
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: Styles.textStyle14)),
@@ -77,7 +77,8 @@ class BookListViewItem extends StatelessWidget {
                       width: 100.w,
                     ),
                     BookRating(
-                      averageRating: book.volumeInfo.averageRating ?? 8,
+                      averageRating:
+                          book.volumeInfo.averageRating?.round() ?? 5,
                       countRating: book.volumeInfo.ratingCount ?? 101,
                     ),
                   ],
