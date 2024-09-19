@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pro_book/core/helper/launch_url.dart';
 import 'package:pro_book/core/widget/custom_buttom.dart';
 import 'package:pro_book/features/Home/data/models/book_model/book_model.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class BookAction extends StatelessWidget {
   const BookAction({super.key, required this.bookModel});
