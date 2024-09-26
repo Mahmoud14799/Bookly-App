@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-import 'package:pro_book/core/utils/app_router.dart';
 import 'package:pro_book/core/widget/custom_error_widget.dart';
 import 'package:pro_book/core/widget/custom_loading_indicator.dart';
 import 'package:pro_book/features/Home/presentation/manger/featured_books_cubit/featured_book_cubit.dart';

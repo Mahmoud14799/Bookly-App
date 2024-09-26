@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:pro_book/core/utils/app_router.dart';
 
 import 'package:pro_book/features/splash/presentation/views/widget/sliding_animation.dart';
-import 'package:pro_book/core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
