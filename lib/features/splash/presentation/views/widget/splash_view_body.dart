@@ -50,7 +50,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
       children: [
         SlidingAnimation(
             slidingAnimation: slidingAnimationImage,
-            child: Image.asset(AssetsData.logoSplash)),
+            child: const Icon(
+              Icons.book,
+              color: Color.fromRGBO(15, 175, 154, 0),
+            )),
         const SizedBox(
           height: 4,
         ),

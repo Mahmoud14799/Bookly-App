@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pro_book/core/helper/snack_bar.dart';
 
 class AppBarDetailsView extends StatelessWidget {
   const AppBarDetailsView({super.key});
@@ -19,7 +21,10 @@ class AppBarDetailsView extends StatelessWidget {
               icon: const Icon(Icons.close, size: 31),
             ),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  MessageProperty('version', 'This Features a new Version');
+                  snackBar(context, 'this features the new version');
+                },
                 icon: const Icon(
                   Icons.shopping_cart_outlined,
                   size: 25,

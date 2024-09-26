@@ -1,7 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
-import 'package:pro_book/core/utils/app_router.dart';
 import 'package:pro_book/core/utils/assets.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -19,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
         ),
         IconButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRouter.kSearchView);
+              MessageProperty('New Version', 'This Feature A New Version');
             },
             icon: const Icon(
               FontAwesomeIcons.magnifyingGlass,
